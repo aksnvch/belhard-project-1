@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+           width: 700px;
+
+           border-collapse: collapse;
+
+           border: 3px solid rgb(91, 3, 85);
+        }
+
+        td {
+           padding: 3px;
+
+           border: 4px solid;
+
+           text-align: left;
+
+           background-color: rgb(245, 187, 227);
+        }
+        </style>
+</head>
+<body>
+
+    
+    <script>
+
+        // 1 
+        let username = prompt("Введите ваш логин");
+        if(username == null) {
+    alert("Вход отменён");
+    }
+        else if (username === "Админ") {
+           let pass = prompt ("Введите пароль"); 
+           if (pass == null) {
+        alert("Вход отменён")
+    }
+    if (pass === "123321") {
+        alert ("Добро пожаловать!");
+    }
+    else {
+        alert ("Пароль неверен")
+    }
+}
+    else  {
+    alert("Пользователь не найден");
+    }
+   
+    //2 
+    let c = prompt ("Введите переменную age");
+    if (c >=14 && c <= 90) {
+        alert("введённое вами число входит в заданный промежуток");
+    }
+    else {
+        alert("число не входит в заданный промежуток");
+    }
+
+    //3 
+    let i = 0;
+    while (i < 3)  {
+        alert ("номер " + i + "!");
+        i++;
+    }
+
+    //4
+     for (let i = 2; i <= 10; i++) {
+     if (i % 2 == 0) {
+         document.write (i + " ");
+     }
+     }
+    
+    //5
+    for (i1 = 11; i1 >=1; i1--) {
+        if (i1 % 2 != 0) {
+            document.write ("<br>" + i1 + " ");
+        }
+    }
+
+    //6 
+    // for (p = 1; p <= 11; p++) {
+    //     if (p % 2 == 0) {
+    //         // document.write ();
+    //     }
+    //     else {
+
+    //         // document.write ();
+    //     }
+    // }
+    
+    //7
+    let a = parseInt(prompt("Введите количество строк"))
+let b = parseInt(prompt("Введите количество столбцов"))
+document.write("<table>")
+    let u = 1; //нумерация ячеек
+for (let r = 1; r <= a; r++) {
+    document.write("</tr>")
+    for (let j = 1; j <= b; j++) {
+        
+      document.write("<td>" + "ячейка " + u++ + "</td>");
+      
+    }
+}
+document.write("</table>")
+document.write("<br>")
+document.write("<br>")
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<style>
+     img {
+        height: 250px;
+        width: 15%;
+    }
+    div {
+        height: 280px;
+        border: 1px solid blue;
+        margin: 15px;
+        display: flex;
+        justify-content: space-around; 
+        align-items: center; 
+
+    }
+    /* Свойство justify-content задает выравнивание элементов вдоль главной оси */
+
+    </style>
+<body> 
+    <section id="box">
+        <!-- <div>
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+        </div>
+        <div>
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+            </div> -->
+        </section>
+    <script>
+        //1 
+
+        let a = +prompt ("введите а: ");
+        let b = +prompt ("введите b: ");
+        let sum = a + b;
+
+        switch (sum) {
+            case 3:
+            alert ("мало");
+            break;
+            case 2:
+            alert ("мало");
+            break;
+            case 1:
+            alert ("мало");
+            break;
+            case 0: 
+            alert ("мало");
+            break;
+            
+            
+            default:
+             alert ("много");
+
+        }
+
+     
+       let result = (sum < 4) ? alert ('мало') : alert ('много');
+
+    //    //2
+
+       let i1 = 0;
+       while (i1 < 3) {
+           alert ("номер " + i1 + "!");
+           i1++;
+       }
+
+        let j1 = 0;
+        do {
+            alert ("номер " + j1 + "!");
+            j1++;
+        } while (j1 < 3);
+
+        //3 -----
+
+        let n = +prompt ("введите количество блоков div:");
+        let p = prompt ("введите количество картинок в каждом блоке ( от 1 до 11):");
+         let s = "";
+
+        if (p >= 1 && p <= 11) {
+            for (i = 1; i <= n; i++) {
+                s += "<div>";
+
+                    for (j = 1; j <= p; j++) {
+                        s += `<img src = "images/${j}.jpg">`;
+
+                    }
+
+                    s += "</div>";
+
+            }
+            box.innerHTML = s;
+        } else alert ("неверное количество блоков");
+       
+       
+    </script>
+</body>
+</html>
